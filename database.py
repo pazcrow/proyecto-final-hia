@@ -1,8 +1,6 @@
 import sqlite3
 import pandas as pd
-import random 
-from faker import Faker
-from faker import Faker
+
 
 class database:
 
@@ -12,7 +10,6 @@ class database:
         self.cursor = ''
         self.gender_list = ["M", "F"]
         self.marital_list = ["Soltero", "Casado", "Diviorciado","Viudo"]
-        self.fake = Faker('es_ES')
         self.db_path = "base/hdr.db"
 
 
@@ -20,7 +17,7 @@ class database:
         try:
             self.conn = sqlite3.connect(self.db_path)
             self.cursor = self.conn.cursor()
-            print("Conexion exitosa")
+            print("INFO: Conexion exitosa a base de datos")
             return True
         except Exception as e:
             print(e)
@@ -56,13 +53,4 @@ class database:
 
         self.conn.commit()
         self.conn.close()
-
-    def random_gender(self):
-        return self.gender_list[random.randint(0, len(self.gender_list)-1)]
-    
-    def random_marital_status(self):
-        return self.marital_list[random.randint(0, len(self.marital_list)-1)]
-    
-    def random_age(self):
-        return random.randint(18, 65)
 
