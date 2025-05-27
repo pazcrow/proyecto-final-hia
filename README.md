@@ -2,7 +2,7 @@
 
 1.- Creación entorno virtual
 
-    `python3.12  -m venv project_hia`
+    `python -m venv project_hia`
     
 2.- Activación de entorno virtual
 
