@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pgwalker
+Version: 0.0.2
+Summary: PLotly Dash component wrapping the Graphic-Walker react component
+Home-page: UNKNOWN
+Author: Gibbs Consulting <dash.pgwalker@gibbsconsulting.ca>
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+License-File: LICENSE
+
+UNKNOWN
+

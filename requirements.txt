@@ -1,6 +1,4 @@
 pandas==2.2.2
-faker==24.8.0
-numpy==1.26.4
 matplotlib==3.8.4
 bokeh==3.4.1
 plotly==5.22.0

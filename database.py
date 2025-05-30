@@ -8,8 +8,6 @@ class database:
         self.path = 'base/HRD_Dataset.db'
         self.conn = ''
         self.cursor = ''
-        self.gender_list = ["M", "F"]
-        self.marital_list = ["Soltero", "Casado", "Diviorciado","Viudo"]
         self.db_path = "base/hdr.db"
 
 
@@ -39,7 +37,6 @@ class database:
     def insert_register(self):
         df = pd.read_csv("data/last_dataset.csv")
 
-        # Ensure required columns are present
         required_columns = ['EmpID', 'University', 'State', 'GenderID', 'MaritalStatusID']
         if not all(col in df.columns for col in required_columns):
             raise ValueError(f"Missing one or more required columns: {required_columns}")
